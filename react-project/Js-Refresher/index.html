@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 34 ////// Modern Js Keyword >>>>> ES6;
+        let str = "This is js....!!"; 
+        const b = "This is constant...!!!"
+        console.log(a, str, b);
+
+        //// Data types >>>> Numbers, Objects, Boolean, String, undefined, null
+        let bool = true; //// Boolean
+        console.log(bool);
+        let obj = [{name:"Vrushbh", id:1}]; //// Objects
+        console.log(obj, typeof(obj))
+        console.log(unde); ///// its hoisting before memory allocation varibale always undefined
+        var unde;
+
+        //// function
+        function getName(name){
+            console.log(`${name} is my name`)
+        }
+        
+        getName("Vrushabh");
+
+        let add = (num1, num2) => {
+            console.log(num1+num2);
+        }
+
+        add(5, 9);
+
+        //// DOM Manupulation
+        document.addEventListener("click", ()=> {
+            console.log("Mouse in")
+            document.body.style.color ='red';
+            document.body.style.backgroundColor ='purple';
+            document.body.style.textAlign = "center"
+            
+        })
+        ///// Array
+        let arr = [34, 21, 23];
+        arr.map((el, index, arr) => {
+            console.log(el,index, arr);
+        })
+
+        let rever = arr.reverse();
+        console.log(rever);
+        arr.filter(el => {
+            console.log(el);
+        })
+
+        ///// Loops 
+        let arr_1 = [1,2,3,4,5,6,7,8,9];
+        for(let i=0;i<arr_1.length;i++){
+            if(i%2 ==0){
+                console.log(`${i} is even no `);
+            }
+        }
+
+        //// this
+        let mobj = {
+            a:this,
+            func: (number) => {
+                console.log(number, this);
+            }
+        }
+        mobj.func();
+        console.log(mobj.a);
+
+        ///// callback
+        setTimeout(()=> {
+            console.log("This is callback");
+        }, 3000)
+    </script>
+</head>
+<body>
+    <div class="haed_1">
+        <h1 > I'm learnign Js</h1>
+    </div>
+   
+</body>
+</html>
